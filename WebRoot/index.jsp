@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -18,9 +18,59 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<link rel="stylesheet" type="text/css" href="css/my.css">
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <div class="container">
+    <!--左眼开始-->
+    <div class="eyesBoxs pullLeft">
+        <div class="profile skewLeft"></div>
+        <div class="shadow skewLeft"></div>
+        <div class="basic ani-narrow"></div>
+        <div class="eyes ani-zoom">
+            <div class="line">           
+                <div class="hook ani-rotateHook">
+                    <span class="bar"><b></b></span>
+                    <span class="bar"><b></b></span>
+                    <span class="bar"><b></b></span>
+                </div>
+                <div class="tube ani-rotateTube">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+        <div class="trans skewLeft">
+            <span class="bar ani-shadow"></span>
+        </div>
+    </div>
+    <!--左眼结束-->
+    <!--右眼开始-->
+    <div class="eyesBoxs pullRight">
+        <div class="profile skewRight"></div>
+        <div class="shadow skewRight"></div>
+        <div class="basic ani-narrow"></div>
+        <div class="eyes ani-zoom">
+            <div class="line">           
+                <div class="hook ani-rotateHook">
+                    <span class="bar"><b></b></span>
+                    <span class="bar"><b></b></span>
+                    <span class="bar"><b></b></span>
+                </div>
+                <div class="tube ani-rotateTube">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+        <div class="trans skewRight">
+            <span class="bar ani-shadow"></span>
+        </div>
+    </div>
+    <!--右眼结束-->
+</div>
   </body>
 </html>
