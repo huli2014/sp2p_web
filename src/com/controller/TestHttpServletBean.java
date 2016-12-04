@@ -1,4 +1,4 @@
-package com.test;
+package com.controller;
 
 import org.springframework.web.servlet.HttpServletBean;
 /**

@@ -1,4 +1,4 @@
-package com.test;
+package com.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,16 +16,18 @@ import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("test")
 public class HelloWorld {
-	@RequestMapping("/test/helloworld")
-	public ModelAndView handleRequest(HttpServletRequest arg0,
+	@RequestMapping("helloworld")
+	public String handleRequest(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("Hello my SpringMVC!");
 		WebApplicationContext wac = (WebApplicationContext) arg0.getAttribute(DispatcherServlet.class.getName() + ".CONTEXT");
 		//System.out.println(wac.getBean("viewResolver"));
 		ServletContext sc = wac.getServletContext();
-		return new ModelAndView("/WEB-INF/aaa");
+		//return new ModelAndView("aaa");
+		return "aaa";
 	}
 	@RequestMapping(value="/list",method=RequestMethod.GET)
 	@ResponseBody
@@ -40,7 +42,7 @@ public class HelloWorld {
 	}
 	@RequestMapping("bootstrap")
 	public ModelAndView initBootstrap(){
-		ModelAndView modelAndView = new ModelAndView("/WEB-INF/bootstrap");
+		ModelAndView modelAndView = new ModelAndView("bootstrap");
 		return modelAndView;
 	}
 }
