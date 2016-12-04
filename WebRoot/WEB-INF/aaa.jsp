@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-我的第一个SPRING MVC例子
+<h1>我的第一个SPRING MVC例子</h1>
 ${map.success }
 </body>
 </html>

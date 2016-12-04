@@ -27,7 +27,7 @@ public class HelloWorld {
 		ServletContext sc = wac.getServletContext();
 		return new ModelAndView("/WEB-INF/aaa");
 	}
-	@RequestMapping(value="/test/list",method=RequestMethod.GET)
+	@RequestMapping(value="/list",method=RequestMethod.GET)
 	@ResponseBody
 	public ModelAndView getUserList(String id){
 		ModelAndView modelAndView = new ModelAndView("/WEB-INF/aaa");
@@ -38,6 +38,10 @@ public class HelloWorld {
 	    System.out.println("-----------"+id);
 	    return modelAndView;
 	}
-
+	@RequestMapping("bootstrap")
+	public ModelAndView initBootstrap(){
+		ModelAndView modelAndView = new ModelAndView("/WEB-INF/bootstrap");
+		return modelAndView;
+	}
 }
 
